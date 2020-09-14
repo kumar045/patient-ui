@@ -1,5 +1,6 @@
 FROM node:8-alpine
-COPY public app.js backendApi.js package-lock.json package.json ./
+COPY app.js backendApi.js package-lock.json package.json ./
+COPY public ./public
 RUN npm install &&\
     apk update &&\
     apk upgrade
